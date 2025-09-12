@@ -47,6 +47,7 @@
 .header section .navbar {
     display: flex;
     gap: 20px;
+    align-items: center;
 }
 
 .header section .navbar a {
@@ -54,11 +55,24 @@
     font-size: 20px;
 }
 
+.header section .navbar a:hover {
+    font-size: 25px;
+}
+
 .header section .navbar .contato  {
+    display:flex;
     background: var(--amarelo-escuro);
-    border: 0.2px solid var(--amarelo);
+    border: 3px solid var(--amarelo);
     border-radius: 30px;
     align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 40px;
+}
+
+.header section .navbar .contato:hover {
+    width: 160px;
+    height: 50px;
 }
 
 /*Container inicial*/
