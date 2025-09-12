@@ -11,63 +11,73 @@
 </head>
 
 <body>
-
+    <div class="fundo"></div>
     <header class="header">
         <section>
             <a href="#menu" class="menu">
                 <img width="50" height="50" src="https://img.icons8.com/sf-black/50/ffffff/menu.png" alt="menu" />
+                <p>menu</p>
             </a>
-
             <a href="#home" class="logo">
-                <img src="/img/Scott-Logo.png" alt="MarcenariaScott-Logo">
+                <img src="/img/logo-Scott-Photoroom.png" alt="logo_Scott">
             </a>
 
             <button>orçamentos</button>
-
         </section>
     </header>
 
     <div class="home-container">
-        <section id="home">
+        <section class="img-principal">
+            <img src="/img/Inserir um título (1).png" alt="">
+                    <h1>Mais que móveis, planejamos histórias</h1>
+                    <p>
+                        Na Marcenaria Scott Art, oferecemos móveis sob medida com acabamento impecável e materiais de
+                        alta
+                        qualidade. Nossa especialidade é criar peças únicas que unem beleza, funcionalidade e
+                        durabilidade,
+                        garantindo um resultado que supera expectativas
+                    </p>
+        </section>
 
-            <div id="carouselExample" class="carousel-slides">
-
-                <div class="carousel-inner-container">
-                <ul class="carousel-inner">
-                    <div class="carousel-item">
-                        <li class="carousel-slide"><img src="/img/Inserir um título (1).png" class="d-block w-100" alt="img1"></li>
+        <section class="home" id="home">
+                <form class="forms-orcamento" action="">
+                    <h1>Solicite Orçamento</h1>
+                    <p>Mais que móveis, planejamos histórias</p>
+                    <div class="caixa1">
+                        <div class="text-box">
+                            <input class="nome" type="text" placeholder="Seu Nome*">
+                        </div>
+                        <div class="text-box">
+                            <input class="sobrenome" type="text" placeholder="Seu Sobrenome*">
+                        </div>
                     </div>
-                    <div class="carousel-item">
-                        <li class="carousel-slide"><img src="/img/Inserir um título (2).png" class="d-block w-100" alt="img2"></li>
+                    <div class="caixa2">
+                        <div class="text-box">
+                            <input class="email" type="email" placeholder="Seu Email*">
+                        </div>
+                        <div class="text-box">
+                            <input class="numero" type="tel" placeholder="Insira ddd+Numero / WhatsApp">
+                        </div>
+                        <div class="text-box">
+                            <input class="planejar" type="text" placeholder="O que você deseja planejar?">
+                        </div>
+                        <select id="lojas">
+                        <option value="">Selecione uma loja...</option>
+                        <option value="Instagram">Instagram</option>
+                        <option value="Google">Google</option>
+                        <option value="Facebook">Facebook</option>
+                        <option value="Indicação">Indicação</option>
+                        <option value="Outros">Outros</option>
+                    </select>
+                    <br>
+                    <button class="btn">Enviar</button>
                     </div>
-                    <div class="carousel-item">
-                        <li class="carousel-slide"><img src="/img/Inserir um título (3).png" class="d-block w-100" alt="img3"></li>
-                    </div>
-                </ul>
-                </div>
-
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample"
-                    data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExample"
-                    data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
-            </div>
-            <div>
-                <h1>Dê vida aos seus ambientes com móveis planejados que unem elegância, praticidade e alta qualidade.
-                </h1>
-                <p>Na Marcenaria Scott Art, oferecemos móveis sob medida com acabamento impecável e materiais de alta
-                    qualidade. Nossa especialidade é criar peças únicas que unem beleza, funcionalidade e durabilidade,
-                    garantindo um resultado que supera expectativas</p>
-                <a href="#faleConosco" class="btn">Comece a Decorar</a>
-            </div>
+                
+                </form>
         </section>
     </div>
+
+    <script src="/script.js"></script>
 </body>
 
 </html>
