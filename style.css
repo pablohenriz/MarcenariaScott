@@ -3,6 +3,9 @@
 :root {
     --amarelo: #ffa500;
     --amarelo-escuro: #bd8827;
+    --preto: #000;
+    --cinza-meioescuro: #555555;
+    --branco: #fff;
 }
 
 * {
@@ -13,13 +16,17 @@
     outline: none;
     text-decoration: none;
     box-sizing: border-box;
-    transition: 0.5s;
+    transition: 0.7s;
 }
 
+::selection {
+    background-color: var(--cinza-meioescuro);
+    color: var(--branco);
+}
 .fundo {
     background-color: black;
-    padding-bottom: 5.4rem;
-    padding-top: 1rem;
+    padding-bottom: 4.2rem;
+    padding-top: 2rem;
 }
 
 .header {
@@ -32,33 +39,63 @@
     right: 0;
     z-index: 10000;
     align-items: center;
-    backdrop-filter: blur(10px);
+}
+
+.header section .logo img {
+    margin: 10px;
 }
 
 .header section {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    padding-bottom: 1rem;
-    padding-top: 1rem;
+    padding-bottom: 0rem;
+    padding-top: 0rem;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
 
-.header section .navbar {
+.header nav {
+    padding: 15px;
+}
+
+.header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
     display: flex;
-    gap: 20px;
+    gap: 30px;
 }
 
-.header section .navbar a {
-    color: #fff;
+.header nav ul li {
+    position: relative;
+}
+
+.header nav ul li a {
+    color: white;
     font-size: 20px;
+    position: relative;
+    padding: 5px 0;
 }
 
-.header section .navbar .contato  {
-    background: var(--amarelo-escuro);
-    border: 0.2px solid var(--amarelo);
-    border-radius: 30px;
-    align-items: center;
+/* Linha que vai animar */
+.header nav ul li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 0;
+    height: 2px;
+    background: var(--amarelo);
+    transition: width 0.3s ease;
+}
+
+.header nav ul li a:hover::after {
+    width: 100%;
+}
+
+.header nav ul li a:hover {
+    color: var(--amarelo);
+    transition: 0.3s;
 }
 
 /*Container inicial*/
@@ -67,39 +104,109 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
 }
 
 .home-container section {
     height: 850px;
     display: flex;
     align-items: center;
-    margin-left: 50px;
+    justify-content: center;
 }
 
 .home-container .conteudo {
-    max-width: 60rem;
+    display: flex;
+    max-width: 90rem;
     padding: 20px;
     color: #fff;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .home-container .conteudo h1 {
     font-size: 5rem;
-    font-weight: 1;
+    font-weight: 9px;
     margin-bottom: 15px;
 }
 
+.home-container .conteudo h1 span {
+    color: #ffa500;
+    border-bottom: 4px solid var(--amarelo);
+}
+
 .home-container .conteudo p {
+    max-width: 60rem;
     font-size: 22px;
     margin-bottom: 30px;
 }
 
 .home-container .conteudo button {
-    background: var(--amarelo);
-    width: 200px;
-    height: 50px;
-    font-size: 17px;
+    display: flex;
+    background: #000000b6;
+    backdrop-filter: blur(250px);
+    width: 490px;
+    height: 85px;
+    border-radius: 50px;
+    border: 3.5px solid var(--amarelo);
+    color: var(--amarelo);
+    font-size: 35px;
+    align-items: center;
+    justify-content: center;
+    gap: 0px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    cursor: pointer;
+    margin-top: 50px;
 }
 
+.home-container .conteudo button:active {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+
+
+/*historia */
+.historia-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 60px;
+    gap: 30px;
+}
+
+.historia-container .caixa { 
+    width: 590px;
+    height: 400px;
+    text-align: center;
+}
+
+.historia-container .caixa h1 {
+    font-size: 37px;
+    margin-bottom: 40px;
+}
+
+.historia-container .caixa p {
+    width: 560px;
+    margin-bottom: 30px;
+}
+
+.historia-container .caixa .btn-s {
+    width: 200px;
+    height: 50px;
+    padding-bottom: 5px;
+    font-size: 17px;
+    background: var(--amarelo);
+    color: var(--preto);
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.historia-container img {
+    width: 450px;
+    height: 400px;
+}
 
 
 /*Formulario*/
