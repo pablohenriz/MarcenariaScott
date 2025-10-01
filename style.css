@@ -73,29 +73,13 @@
 .header nav ul li a {
     color: white;
     font-size: 20px;
-    position: relative;
-    padding: 5px 0;
 }
 
-/* Linha que vai animar */
-.header nav ul li a::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -3px;
-    width: 0;
-    height: 2px;
-    background: var(--amarelo);
-    transition: width 0.3s ease;
-}
-
-.header nav ul li a:hover::after {
-    width: 100%;
-}
-
-.header nav ul li a:hover {
-    color: var(--amarelo);
-    transition: 0.3s;
+.header section .navbar .contato  {
+    background: var(--amarelo-escuro);
+    border: 0.2px solid var(--amarelo);
+    border-radius: 30px;
+    align-items: center;
 }
 
 /*Container inicial*/
